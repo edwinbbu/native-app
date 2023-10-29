@@ -26,9 +26,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textBox: {
-    height: 40,
+    height: 30,
     borderStyle: "solid",
     borderColor: "gray",
-    borderWidth: "1px",
+    borderWidth: 1,
+    paddingLeft: 10,
+    paddingRight: 10,
   },
 });
