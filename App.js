@@ -6,7 +6,7 @@ export default function App() {
   const [name, setName] = useState("");
   return (
     <View style={styles.container}>
-      <Text>Enter your name </Text>
+      <Text style={styles.text}>Enter your name </Text>
       <TextInput
         style={styles.textBox}
         placeholder="Name"
@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  text: {
+    marginBottom: 5,
   },
   textBox: {
     height: 30,
