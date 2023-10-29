@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
 
 export default function App() {
   const [name, setName] = useState("");
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Enter your name </Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="mb-1 ">Enter your name </Text>
       <TextInput
-        style={styles.textBox}
+        className="border border-solid border-gray-200 px-3 h-10"
         placeholder="Name"
         onChangeText={(text) => setName(text)}
         value={name}
@@ -17,23 +17,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    marginBottom: 5,
-  },
-  textBox: {
-    height: 30,
-    borderStyle: "solid",
-    borderColor: "gray",
-    borderWidth: 1,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-});
