@@ -1,39 +1,8 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
+import { Login } from "./components/Login";
 
 export default function App() {
-  const [name, setName] = useState("");
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Enter your name </Text>
-      <TextInput
-        style={styles.textBox}
-        placeholder="Name"
-        onChangeText={(text) => setName(text)}
-        value={name}
-      />
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <Login />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    marginBottom: 5,
-  },
-  textBox: {
-    height: 30,
-    borderStyle: "solid",
-    borderColor: "gray",
-    borderWidth: 1,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-});
