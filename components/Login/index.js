@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Text, TextInput, View, Button, Alert } from "react-native";
+import {
+  Text,
+  TextInput,
+  View,
+  Button,
+  Alert,
+  TouchableOpacity,
+} from "react-native";
 
 export const Login = () => {
   const [name, setName] = useState("");
@@ -8,7 +15,9 @@ export const Login = () => {
   return (
     <View className="flex-1 items-center justify-center bg-white">
       <View className="w-3/4 space-y-2">
-        <Text className="mb-1">Login</Text>
+        <Text className="mb-1 items-center justify-center text-xl font-semibold">
+          Betterworld
+        </Text>
         <TextInput
           className="border border-solid border-gray-200 px-3 h-10 w-full"
           placeholder="Name"
@@ -22,11 +31,12 @@ export const Login = () => {
           value={password}
           secureTextEntry={true}
         />
-        <Button
-          title="Press me"
+        <TouchableOpacity
+          className="bg-blue-500 px-3 h-10 w-full items-center justify-center"
           onPress={() => Alert.alert("Simple Button pressed")}
-          className="bg-blue-500 text-white px-3 h-10 w-full"
-        />
+        >
+          <Text className="text-white">Login</Text>
+        </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
     </View>
