@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -33,7 +33,7 @@ export const Login = () => {
         />
         <TouchableOpacity
           className="bg-blue-500 px-3 h-10 w-full items-center justify-center"
-          onPress={() => Alert.alert("Simple Button pressed")}
+          onPress={() => navigation.navigate("Dashboard")}
         >
           <Text className="text-white">Login</Text>
         </TouchableOpacity>
