@@ -16,7 +16,7 @@ export const Login = () => {
     <View className="flex-1 items-center justify-center bg-white">
       <View className="w-3/4 space-y-2">
         <Text className="mb-1 items-center justify-center text-xl font-semibold">
-          Betterworld
+          Better News
         </Text>
         <TextInput
           className="border border-solid border-gray-200 px-3 h-10 w-full"
