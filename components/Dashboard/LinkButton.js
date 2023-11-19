@@ -15,7 +15,5 @@ export const LinkButton = ({ url, children }) => {
     }
   }, [url]);
 
-  return (
-    <Button className="items-start" title={children} onPress={handlePress} />
-  );
+  return <Button title={children} onPress={handlePress} />;
 };
