@@ -2,4 +2,4 @@
 React native news app
 
 ## Screenshot
-![Home page](https://user-images.githubusercontent.com/17916573/284078965-5c46104d-58fe-42dd-9885-3074f81449a9.png "Dashboard")
+![Home page](https://user-images.githubusercontent.com/17916573/284079205-5bb54cbb-74c2-4338-af87-fb9e28c3b5d3.png "Dashboard")
