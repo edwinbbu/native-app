@@ -5,9 +5,12 @@ import { getArticles } from "../api/getArticles";
 export const Dashboard = () => {
   const [articles, setArticles] = useState([]);
 
-  useEffect(async () => {
-    const articles = await getArticles();
-    setArticles(articles);
+  useEffect(() => {
+    const fetchNews = async () => {
+      const articles = await getArticles();
+      setArticles(articles);
+    };
+    fetchNews();
   }, []);
 
   return (
