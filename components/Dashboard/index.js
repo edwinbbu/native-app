@@ -9,7 +9,6 @@ export const Dashboard = () => {
   useEffect(() => {
     const fetchNews = async () => {
       const articles = await getArticles();
-      console.log("articles", articles);
       setArticles(articles);
     };
     fetchNews();
@@ -26,7 +25,9 @@ export const Dashboard = () => {
               }}
               className="h-48 w-full"
             />
-            <Text className="text-base font-semibold">{article.title}</Text>
+            <Text className="text-base font-semibold mt-2">
+              {article.title}
+            </Text>
             <Text>{article.description}</Text>
             <LinkButton url={article.url}>Read More</LinkButton>
           </View>

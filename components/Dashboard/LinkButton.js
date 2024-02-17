@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { Alert, Button, Linking } from "react-native";
+import { Alert, Button, Linking, TouchableOpacity, Text } from "react-native";
 
 export const LinkButton = ({ url, children }) => {
   const handlePress = useCallback(async () => {
@@ -15,5 +15,12 @@ export const LinkButton = ({ url, children }) => {
     }
   }, [url]);
 
-  return <Button title={children} onPress={handlePress} />;
+  return (
+    <TouchableOpacity
+      className="mt-2 items-start justify-center"
+      onPress={handlePress}
+    >
+      <Text className="text-blue-700 text-left">Read more</Text>
+    </TouchableOpacity>
+  );
 };
